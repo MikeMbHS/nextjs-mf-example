@@ -114,10 +114,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@module-federation/nextjs-mf@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@module-federation/nextjs-mf/-/nextjs-mf-2.3.1.tgz#d8029e1f225c7719370ec564c6937271a74a12bc"
-  integrity sha512-mWeVr/kb0Ip0zgKXO9e/ub5PEb9wNFNFzy06+wDhXCtz1YGaPlTiyjnvpwZbAwD1ha8B3EcHjKYEB3ic/0ogKQ==
+"@module-federation/nextjs-mf@^3.2.0":
+  version "3.2.0"
+  resolved "http://r.privjs.com/@module-federation%2fnextjs-mf/-/nextjs-mf-3.2.0.tgz#33a1ba27749beac7571578698869ba836db13161"
+  integrity sha512-x9LuQd4+8ck1uI7onDxF9qNrW/u2h3RhbLtqjCB3Shoh66SBV5aGkSoI1dzxJ8Ntpg1SxkyiwJusfsSx3i7ztg==
   dependencies:
     webpack-federated-stats-plugin "2.0.5"
 

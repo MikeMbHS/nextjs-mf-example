@@ -19,41 +19,41 @@ module.exports = withFederatedSidecar({
 })({
   webpack(config, options) {
 
-    // const {
-    //   webpack,
-    //   isServer
-    // } = options;
+    const {
+      webpack,
+      isServer
+    } = options;
 
-    // config.experiments = {
-    //   topLevelAwait: true
-    // };
+    config.experiments = {
+      topLevelAwait: true
+    };
 
-    // config.output.publicPath = "auto";
+    config.output.publicPath = "auto";
 
 
-    // if (!isServer) {
-    //   config.output.publicPath = "auto";
-    //   config.plugins.push(
-    //     new webpack.container.ModuleFederationPlugin({
-    //       shared: {
-    //         react: {
-    //           singleton: true,
-    //           eager: true,
-    //           requiredVersion: false,
-    //         },
-    //         "@module-federation/nextjs-mf/lib/noop": {
-    //           eager: false,
-    //         },
-    //       },
-    //     })
-    //   );
-    // }
+    if (!isServer) {
+      config.output.publicPath = "auto";
+      config.plugins.push(
+        new webpack.container.ModuleFederationPlugin({
+          shared: {
+            react: {
+              singleton: true,
+              eager: true,
+              requiredVersion: false,
+            },
+            "@module-federation/nextjs-mf/lib/noop": {
+              eager: false,
+            },
+          },
+        })
+      );
+    }
 
-    // // we attach next internals to share scope at runtime
-    // config.module.rules.push({
-    //   test: /pages\/_app.[jt]sx?/,
-    //   loader: "@module-federation/nextjs-mf/lib/federation-loader.js",
-    // });
+    // we attach next internals to share scope at runtime
+    config.module.rules.push({
+      test: /pages\/_app.tsx?/,
+      loader: "@module-federation/nextjs-mf/lib/federation-loader.js",
+    });
 
     return config;
   }

@@ -10,7 +10,7 @@ export interface FarewellProps {
 export default function Farewell({ isStandalone }: FarewellProps) {
 
     const [test, setTest] = useState("");
-    
+
     return (
         <div className={styles.farewell} >
             <h1>I am a Microfrontend. Goodbye!</h1>

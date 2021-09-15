@@ -19,9 +19,10 @@ const Farewell = dynamic(
   // @ts-ignore
   () => window.microfrontendnextjs.get("./Farewell").then((factory) => factory()),
   {
-    ssr: false,
+      ssr: false,
   }
 );
+
 
 if(typeof(window) !== "undefined"){
 console.log(Farewell);
@@ -30,7 +31,7 @@ console.log( window.microfrontendnextjs);
 }
 
 
-const Home: NextPage = () => {
+const Example: NextPage = () => {
   return (
     <div className={styles.container}>
       <h1>Iam a Nextjs Consumer App. I import Microfrontends.</h1>      
@@ -45,4 +46,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Example

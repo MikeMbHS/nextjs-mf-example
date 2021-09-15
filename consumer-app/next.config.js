@@ -55,7 +55,7 @@ const nextConfig = {
 
     // we attach next internals to share scope at runtime
     config.module.rules.push({
-      test: /pages\/_app.[jt]sx?/,
+      test: /_app.tsx/, ///pages\/_app.tsx?/,
       loader: "@module-federation/nextjs-mf/lib/federation-loader.js",
     });
 
